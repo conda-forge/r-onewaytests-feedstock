@@ -1,11 +1,11 @@
-About r-onewaytests
-===================
+About r-onewaytests-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-onewaytests-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=onewaytests
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-onewaytests-feedstock/blob/main/LICENSE.txt)
 
 Summary: Performs one-way tests in independent groups designs including homoscedastic and heteroscedastic tests. These are one-way analysis of variance (ANOVA), Welch's heteroscedastic F test, Welch's heteroscedastic F test with trimmed means and Winsorized variances, Brown-Forsythe test, Alexander-Govern test, James second order test, Kruskal-Wallis test, Scott-Smith test, Box F test and Johansen F test, Generalized tests equivalent to Parametric Bootstrap and Fiducial tests. The package performs pairwise comparisons and graphical approaches. Also, the package includes Student's t test, Welch's t test and Mann-Whitney U test for two samples. Moreover, it assesses variance homogeneity and normality of data in each group via tests and plots (Dag et al., 2018, <https://journal.r-project.org/archive/2018/RJ-2018-022/RJ-2018-022.pdf>).
 
