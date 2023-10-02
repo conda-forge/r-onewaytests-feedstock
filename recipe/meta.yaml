@@ -1,4 +1,4 @@
-{% set version = "2.7" %}
+{% set version = "3.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,13 +10,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/onewaytests_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/onewaytests/onewaytests_{{ version }}.tar.gz
-  sha256: cd0e043cfbe6a630bcbb419b6e57c17b1e0fe75fecb482118f72d66c86ca6490
+  sha256: 67836ba322b457c45dd637d0ee08b0a95f61be00cd7e149d1eb2dd64d07bbf62
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
-
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,20 +24,20 @@ requirements:
   build:
     - {{ posix }}zip               # [win]
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
-
   host:
     - r-base
     - r-car
     - r-ggplot2
     - r-moments
     - r-nortest
-
+    - r-wesanderson
   run:
     - r-base
     - r-car
     - r-ggplot2
     - r-moments
     - r-nortest
+    - r-wesanderson
 
 test:
   commands:
@@ -51,7 +50,6 @@ about:
   summary: Performs one-way tests in independent groups designs including homoscedastic and heteroscedastic tests. These are one-way analysis of variance (ANOVA), Welch's heteroscedastic F test, Welch's heteroscedastic F test with trimmed means and Winsorized variances, Brown-Forsythe test, Alexander-Govern test, James second
     order test, Kruskal-Wallis test, Scott-Smith test, Box F test and Johansen F test, Generalized tests equivalent to Parametric Bootstrap and Fiducial tests. The package performs pairwise comparisons and graphical approaches. Also, the package includes Student's t test, Welch's t test and Mann-Whitney U test for two samples.
     Moreover, it assesses variance homogeneity and normality of data in each group via tests and plots (Dag et al., 2018, <https://journal.r-project.org/archive/2018/RJ-2018-022/RJ-2018-022.pdf>).
-
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
