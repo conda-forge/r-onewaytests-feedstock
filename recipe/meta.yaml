@@ -1,4 +1,4 @@
-{% set version = "3.1" %}
+{% set version = "3.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/onewaytests_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/onewaytests/onewaytests_{{ version }}.tar.gz
-  sha256: 42bb342112cee1a83d7f7a93d7de9538a601441caebdac97eb8caacab452d219
+  sha256: a8c03295338a59b8327d4d13a14c26f7292bb6e62efa2155a02d7f7c03f898dc
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -45,9 +45,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=onewaytests
   license: GPL-2.0-or-later
-  summary: Performs one-way tests in independent groups designs including homoscedastic and heteroscedastic tests. These are one-way analysis of variance (ANOVA), Welch's heteroscedastic F test, Welch's heteroscedastic F test with trimmed means and Winsorized variances, Brown-Forsythe test, Alexander-Govern test, James second
-    order test, Kruskal-Wallis test, Scott-Smith test, Box F test and Johansen F test, Generalized tests equivalent to Parametric Bootstrap and Fiducial tests. The package performs pairwise comparisons and graphical approaches. Also, the package includes Student's t test, Welch's t test and Mann-Whitney U test for two samples.
-    Moreover, it assesses variance homogeneity and normality of data in each group via tests and plots (Dag et al., 2018, <https://journal.r-project.org/archive/2018/RJ-2018-022/RJ-2018-022.pdf>).
+  summary: Performs one-way tests in independent groups designs including homoscedastic and heteroscedastic tests. These are one-way analysis of variance (ANOVA), Welch's heteroscedastic F test, Welch's heteroscedastic F test with trimmed means and Winsorized variances, Brown-Forsythe test, Alexander-Govern test, James
+    second order test, Kruskal-Wallis test, Scott-Smith test, Box F test and Johansen F test, Generalized tests equivalent to Parametric Bootstrap and Fiducial tests. The package performs pairwise comparisons and graphical approaches. Also, the package includes Student's t test, Welch's t test and Mann-Whitney U test 
+    for two samples. Moreover, it assesses variance homogeneity and normality of data in each group via tests and plots (Dag et al., 2018, <https://journal.r-project.org/archive/2018/RJ-2018-022/RJ-2018-022.pdf>).
   license_family: GPL2
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
